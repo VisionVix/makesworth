@@ -637,38 +637,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400}
   .walking-calcy{display:none}
 }
 
-/* ===== 3D HOVER SHOWCASE ===== */
-.showcase-3d{padding:80px 0;background:linear-gradient(160deg,var(--navy-deep) 0%,#0a1628 40%,var(--navy-deep) 100%);overflow:hidden;position:relative}
-.showcase-3d::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(200,150,62,.06),transparent 50%),radial-gradient(circle at 70% 50%,rgba(46,125,91,.04),transparent 50%)}
-.showcase-3d .s-label{color:var(--gold);opacity:.6}
-.showcase-3d .s-title{color:#fff}
-.showcase-3d .s-title em{color:var(--gold)}
-.showcase-3d .s-desc{color:rgba(255,255,255,.45)}
-.showcase-3d-hint{text-align:center;padding:16px 0 0;font-size:.7rem;color:rgba(255,255,255,.2);letter-spacing:1px;text-transform:uppercase}
-
-.hover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:960px;margin:0 auto;padding:0 24px;perspective:1200px}
-.hover-card{position:relative;height:260px;border-radius:16px;overflow:hidden;cursor:pointer;transform-style:preserve-3d;transition:transform .12s ease-out,box-shadow .25s ease;will-change:transform;border:1px solid rgba(255,255,255,.06)}
-.hover-card:hover{box-shadow:0 30px 60px rgba(0,0,0,.4),0 0 40px rgba(200,150,62,.08)}
-.hover-card-bg{position:absolute;inset:0;opacity:.8;transition:opacity .3s}
-.hover-card:hover .hover-card-bg{opacity:1}
-.hover-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.6) 100%)}
-.hover-card-shine{position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none;border-radius:16px}
-.hover-card:hover .hover-card-shine{opacity:1}
-.hover-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:5;transform:translateZ(30px)}
-.hover-card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:12px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);transition:transform .3s,background .3s}
-.hover-card:hover .hover-card-icon{transform:scale(1.1) translateZ(40px);background:rgba(200,150,62,.2)}
-.hover-card-title{font-family:var(--font-display);font-size:1.15rem;color:#fff;margin-bottom:6px;transform:translateZ(25px)}
-.hover-card-desc{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.5;transform:translateZ(20px);transition:color .3s}
-.hover-card:hover .hover-card-desc{color:rgba(255,255,255,.75)}
-/* Floating particles inside cards */
-.hover-card-particle{position:absolute;border-radius:50%;pointer-events:none;animation:hcFloat 6s ease-in-out infinite}
-@keyframes hcFloat{0%,100%{transform:translateY(0) scale(1);opacity:.15}50%{transform:translateY(-20px) scale(1.3);opacity:.35}}
-
-@media(max-width:768px){
-  .hover-grid{grid-template-columns:1fr;max-width:400px}
-  .hover-card{height:220px}
-}
-
 /* ===== GOLD COIN RAIN ===== */
 .coin-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden}
 .coin{position:absolute;top:-60px;width:28px;height:28px;animation:coinFall var(--fall-dur,3s) var(--fall-delay,0s) ease-in forwards;pointer-events:none}
@@ -843,96 +811,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400}
       </div>
     </div>
   </div>
-</section>
-
-<!-- 3D HOVER SHOWCASE — WHY CHOOSE US -->
-<section class="showcase-3d" id="showcase">
-  <div class="container" style="text-align:center;margin-bottom:40px">
-    <div class="s-label reveal">Why Makesworth</div>
-    <h2 class="s-title reveal" style="transition-delay:.1s">Six Reasons Clients <em>Choose Us</em></h2>
-    <p class="s-desc reveal" style="transition-delay:.15s;max-width:560px;margin:12px auto 0">We're not just accountants — we're your financial growth partners.</p>
-  </div>
-  <div class="hover-grid" id="hoverGrid">
-    <!-- Card 1: Savings -->
-    <div class="hover-card" data-tilt>
-      <div class="hover-card-bg" style="background:linear-gradient(160deg,rgba(200,150,62,.4),rgba(11,29,58,.9))"></div>
-      <div class="hover-card-overlay"></div>
-      <div class="hover-card-shine"></div>
-      <div class="hover-card-particle" style="width:40px;height:40px;background:rgba(200,150,62,.08);top:15%;left:60%;animation-delay:0s"></div>
-      <div class="hover-card-particle" style="width:20px;height:20px;background:rgba(200,150,62,.06);top:40%;left:20%;animation-delay:1.5s"></div>
-      <div class="hover-card-content">
-        <div class="hover-card-icon">💰</div>
-        <div class="hover-card-title">Avg. £4,200 Saved</div>
-        <div class="hover-card-desc">Our clients save an average of £4,200 per year through smart tax planning and allowance optimisation.</div>
-      </div>
-    </div>
-    <!-- Card 2: Speed -->
-    <div class="hover-card" data-tilt>
-      <div class="hover-card-bg" style="background:linear-gradient(160deg,rgba(46,125,91,.4),rgba(11,29,58,.9))"></div>
-      <div class="hover-card-overlay"></div>
-      <div class="hover-card-shine"></div>
-      <div class="hover-card-particle" style="width:30px;height:30px;background:rgba(46,125,91,.08);top:20%;left:70%;animation-delay:.3s"></div>
-      <div class="hover-card-particle" style="width:24px;height:24px;background:rgba(46,125,91,.06);top:50%;left:15%;animation-delay:2s"></div>
-      <div class="hover-card-content">
-        <div class="hover-card-icon">⚡</div>
-        <div class="hover-card-title">4-Hour Response</div>
-        <div class="hover-card-desc">No waiting days for a reply. Our team responds to every query within 4 business hours, guaranteed.</div>
-      </div>
-    </div>
-    <!-- Card 3: Tech -->
-    <div class="hover-card" data-tilt>
-      <div class="hover-card-bg" style="background:linear-gradient(160deg,rgba(37,99,235,.4),rgba(11,29,58,.9))"></div>
-      <div class="hover-card-overlay"></div>
-      <div class="hover-card-shine"></div>
-      <div class="hover-card-particle" style="width:35px;height:35px;background:rgba(37,99,235,.08);top:10%;left:55%;animation-delay:.6s"></div>
-      <div class="hover-card-particle" style="width:18px;height:18px;background:rgba(37,99,235,.06);top:55%;left:25%;animation-delay:2.5s"></div>
-      <div class="hover-card-content">
-        <div class="hover-card-icon">🤖</div>
-        <div class="hover-card-title">AI-Powered</div>
-        <div class="hover-card-desc">Xero, Dext, and AI tools automate your bookkeeping. Making Tax Digital ready from day one.</div>
-      </div>
-    </div>
-    <!-- Card 4: Portal -->
-    <div class="hover-card" data-tilt>
-      <div class="hover-card-bg" style="background:linear-gradient(160deg,rgba(139,92,246,.4),rgba(11,29,58,.9))"></div>
-      <div class="hover-card-overlay"></div>
-      <div class="hover-card-shine"></div>
-      <div class="hover-card-particle" style="width:28px;height:28px;background:rgba(139,92,246,.08);top:25%;left:65%;animation-delay:.9s"></div>
-      <div class="hover-card-particle" style="width:22px;height:22px;background:rgba(139,92,246,.06);top:45%;left:10%;animation-delay:1.8s"></div>
-      <div class="hover-card-content">
-        <div class="hover-card-icon">🔐</div>
-        <div class="hover-card-title">Client Portal</div>
-        <div class="hover-card-desc">Upload documents, track deadlines, e-sign, and see real-time status of every filing. All in one secure place.</div>
-      </div>
-    </div>
-    <!-- Card 5: Support -->
-    <div class="hover-card" data-tilt>
-      <div class="hover-card-bg" style="background:linear-gradient(160deg,rgba(236,72,153,.35),rgba(11,29,58,.9))"></div>
-      <div class="hover-card-overlay"></div>
-      <div class="hover-card-shine"></div>
-      <div class="hover-card-particle" style="width:32px;height:32px;background:rgba(236,72,153,.07);top:18%;left:50%;animation-delay:1.2s"></div>
-      <div class="hover-card-particle" style="width:20px;height:20px;background:rgba(236,72,153,.05);top:52%;left:30%;animation-delay:3s"></div>
-      <div class="hover-card-content">
-        <div class="hover-card-icon">🤝</div>
-        <div class="hover-card-title">Dedicated Manager</div>
-        <div class="hover-card-desc">One person who knows your business inside out. No call centres, no explaining yourself twice.</div>
-      </div>
-    </div>
-    <!-- Card 6: Advisory -->
-    <div class="hover-card" data-tilt>
-      <div class="hover-card-bg" style="background:linear-gradient(160deg,rgba(245,158,11,.4),rgba(11,29,58,.9))"></div>
-      <div class="hover-card-overlay"></div>
-      <div class="hover-card-shine"></div>
-      <div class="hover-card-particle" style="width:36px;height:36px;background:rgba(245,158,11,.08);top:12%;left:58%;animation-delay:1.5s"></div>
-      <div class="hover-card-particle" style="width:16px;height:16px;background:rgba(245,158,11,.05);top:48%;left:18%;animation-delay:2.2s"></div>
-      <div class="hover-card-content">
-        <div class="hover-card-icon">📈</div>
-        <div class="hover-card-title">Growth Advisory</div>
-        <div class="hover-card-desc">Strategic financial planning, cashflow forecasting, and business growth advice — not just compliance.</div>
-      </div>
-    </div>
-  </div>
-  <div class="showcase-3d-hint reveal">✦ hover over the cards ✦</div>
 </section>
 
 <!-- FREE TOOLS -->
@@ -2020,40 +1898,6 @@ function typeResponse(html){
     msgs.scrollTop=msgs.scrollHeight;
   },delay);
 }
-
-// ===== 3D HOVER TILT CARDS =====
-document.querySelectorAll('[data-tilt]').forEach(card=>{
-  const shine=card.querySelector('.hover-card-shine');
-  card.addEventListener('mousemove',e=>{
-    const rect=card.getBoundingClientRect();
-    const x=(e.clientX-rect.left)/rect.width;
-    const y=(e.clientY-rect.top)/rect.height;
-    const tiltX=(y-.5)*-20; // -10 to 10 degrees
-    const tiltY=(x-.5)*20;
-    card.style.transform=`perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.03,1.03,1.03)`;
-    // Shine follows cursor
-    if(shine){
-      shine.style.background=`radial-gradient(circle at ${x*100}% ${y*100}%,rgba(255,255,255,.15) 0%,transparent 60%)`;
-    }
-  });
-  card.addEventListener('mouseleave',()=>{
-    card.style.transform='perspective(800px) rotateX(0) rotateY(0) scale3d(1,1,1)';
-    if(shine)shine.style.background='none';
-  });
-  // Touch support
-  card.addEventListener('touchmove',e=>{
-    const touch=e.touches[0];
-    const rect=card.getBoundingClientRect();
-    const x=(touch.clientX-rect.left)/rect.width;
-    const y=(touch.clientY-rect.top)/rect.height;
-    const tiltX=(y-.5)*-15;
-    const tiltY=(x-.5)*15;
-    card.style.transform=`perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02,1.02,1.02)`;
-  },{passive:true});
-  card.addEventListener('touchend',()=>{
-    card.style.transform='perspective(800px) rotateX(0) rotateY(0) scale3d(1,1,1)';
-  });
-});
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})});
