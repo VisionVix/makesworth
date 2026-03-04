@@ -509,6 +509,3 @@ export default function HomePage() {
     </>
   )
 }
-    </>
-  )
-}
