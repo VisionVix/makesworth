@@ -505,7 +505,10 @@ export default function HomePage() {
         <span style={{display:'flex',alignItems:'center',gap:'5px',padding:'0 12px',borderRight:'1px solid #333'}}>⭐ EU AI Act · Article 50 Compliant</span>
         <span style={{display:'flex',alignItems:'center',gap:'5px',padding:'0 12px',borderRight:'1px solid #333'}}>🔒 GDPR Privacy</span>
         <span style={{display:'flex',alignItems:'center',gap:'5px',padding:'0 12px',borderRight:'1px solid #333'}}>📶 SSL Secured</span>
-        <span style={{display:'flex',alignItems:'center',gap:'5px',padding:'0 12px',borderRight:'1px solid #
+         </div>
+    </>
+  )
+}
     </>
   )
 }
